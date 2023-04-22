@@ -1,0 +1,53 @@
+{
+ "name": "Long Beach, California",
+ "general": [
+  "Long Beach is a city located in Los Angeles County, California. It is the seventh most populous city in California, with a population of over 462,000 people.",
+  "Long Beach is home to the Port of Long Beach, one of the busiest ports in the world. It is also home to the Long Beach Convention Center, Aquarium of the Pacific, and the Queen Mary."
+ ],
+ "fun_facts": [
+  "Long Beach is home to the largest urban beach in the United States.",
+  "Long Beach is home to the second-busiest container port in the United States, behind only the Port of Los Angeles."
+ ],
+ "safety_info": [
+  "Be aware of your surroundings and keep an eye on your belongings.",
+  "Be aware of your surroundings when walking at night.",
+  "Be aware of suspicious activity and report it to the police.",
+  "Avoid leaving valuables in your car and lock your doors when not in use."
+ ],
+ "destinations": [
+  {
+   "name": "Long Beach Aquarium of the Pacific",
+   "description": "The Aquarium of the Pacific is an aquarium located in Long Beach, California. It is home to over 11,000 animals from 500 species, and is one of the largest aquariums in the United States."
+  },
+  {
+   "name": "Queen Mary",
+   "description": "The Queen Mary is a retired ocean liner located in Long Beach, California. It is now a tourist attraction, and is home to a museum, restaurant, and hotel."
+  }
+ ],
+ "local_cuisine": {
+  "common": [
+   {
+    "name": "Fish Taco",
+    "similar_dish": "Taco",
+    "description": "Fish tacos are a popular dish in Long Beach, and are usually made with fried fish, lettuce, cheese, and various sauces."
+   },
+   {
+    "name": "Carne Asada Fries",
+    "similar_dish": "French Fries",
+    "description": "Carne Asada Fries are a popular dish in Long Beach, and are usually made with french fries, carne asada, cheese, and various sauces."
+   }
+  ],
+  "unique": [
+   {
+    "name": "Ahi Poke Bowl",
+    "similar_dish": "Poke Bowl",
+    "description": "Ahi Poke Bowls are a popular dish in Long Beach, and are usually made with raw ahi tuna, rice, and various sauces."
+   },
+   {
+    "name": "Ceviche",
+    "similar_dish": "Seafood Salad",
+    "description": "Ceviche is a popular dish in Long Beach, and is usually made with raw seafood, citrus juice, and various vegetables and spices."
+   }
+  ]
+ }
+}
