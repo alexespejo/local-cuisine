@@ -1,0 +1,49 @@
+{
+ "name": "Seoul, South Korea",
+ "local_cuisine": {
+  "common": [
+   {
+    "name": "Kimchi",
+    "similar_dish": "Pickled Vegetables",
+    "description": "A traditional Korean side dish made from fermented vegetables, usually cabbage, and a variety of seasonings including chili pepper, garlic, scallions, and ginger."
+   },
+   {
+    "name": "Bibimbap",
+    "similar_dish": "Mixed Rice",
+    "description": "A popular Korean dish made with steamed white rice and a variety of vegetables, meat, and gochujang (red chili pepper paste)."
+   },
+   {
+    "name": "Bulgogi",
+    "similar_dish": "Marinated Beef",
+    "description": "A popular Korean dish made with marinated beef, usually cooked over an open flame or on a grill."
+   },
+   {
+    "name": "Japchae",
+    "similar_dish": "Stir-Fried Noodles",
+    "description": "A popular Korean dish made with sweet potato noodles, vegetables, and a variety of seasonings."
+   }
+  ],
+  "unique": [
+   {
+    "name": "Haemul Pajeon",
+    "similar_dish": "Seafood Pancake",
+    "description": "A traditional Korean dish made with a variety of seafood, vegetables, and a savory batter."
+   },
+   {
+    "name": "Makchang Gui",
+    "similar_dish": "Grilled Pork Belly",
+    "description": "A traditional Korean dish made with marinated pork belly, grilled over an open flame or on a grill."
+   },
+   {
+    "name": "Jokbal",
+    "similar_dish": "Braised Pig's Feet",
+    "description": "A traditional Korean dish made with braised pig's feet, usually served with a spicy sauce."
+   },
+   {
+    "name": "Gyeran Mari",
+    "similar_dish": "Rolled Omelette",
+    "description": "A traditional Korean dish made with eggs, vegetables, and a variety of seasonings, rolled into a log and sliced into individual servings."
+   }
+  ]
+ }
+}
