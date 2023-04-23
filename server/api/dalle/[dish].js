@@ -9,7 +9,7 @@ export default defineEventHandler(async (event) => {
   n: 1,
   size: "1024x1024",
  });
- console.log(response.data);
+ console.log(response.data.url);
  return {
   res: response.data.data[0],
  };

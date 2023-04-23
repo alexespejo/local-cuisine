@@ -1,15 +1,15 @@
 <script setup>
-const { chat } = useChatgpt();
+// const { chat } = useChatgpt();
 const route = useRoute();
-const destination_obj = ref({});
-const data = ref("");
-const response = await chat(
- `${route.params.id}  give me the name of the destination, include in local_cuisine 4 common and the 4 most unique dishes available, respond in a json format like this {"name":””,"local_cuisine": {"common": [{"name":””,"similar_dish":””,"description":””}],
-Unique:["{name":””, "similar_dish":””,"description":””}]}`
-);
-destination_obj.value = JSON.parse(response);
-data.value = response;
-console.log(destination_obj.valuee);
+// const destination_obj = ref({});
+// const data = ref("");
+// const response = await chat(
+//  `${route.params.id}  give me the name of the destination, include in local_cuisine 4 common and the 4 most unique dishes available, respond in a json format like this {"name":””,"local_cuisine": {"common": [{"name":””,"similar_dish":””,"description":””}],
+// Unique:["{name":””, "similar_dish":””,"description":””}]}`
+// );
+// destination_obj.value = JSON.parse(response);
+// data.value = response;
+// console.log(typeof destination_obj.value);
 // const destination_obj = ref({
 //  name: "Westwood CA",
 //  general: [
@@ -124,51 +124,96 @@ console.log(destination_obj.valuee);
 //    "The food of Westwood CA is a reflection of its rich cultural heritage, which includes influences from Mexican, Spanish, and Native American cuisines.",
 //   ],
 //  },
+
+import { useDestinationsStore } from "~/composabels/store";
+
 // });
-onMounted(() => {});
+const destinationStore = useDestinationsStore();
+const destination_obj = ref(destinationStore[route.params.id]);
+console.log(destination_obj.value);
 </script>
 
 <template>
- <main class="flex flex-col items-center">
-  {{ destination_obj }}
-  <h1 class="text-5xl self-center my-10">{{ destination_obj.name }}</h1>
-  <h2 class="text-4xl font-bold">Local Cuisine</h2>
-  <div class="flex gap-3 justify-center">
-   <div
-    v-for="(i, index) in destination_obj.local_cuisine.popularDishes"
-    :key="index"
-   >
-    <CardImage :description="i.description" :name="i.name" />
+ <Navbar />
+
+ <main class="flex flex-col items-center py-10">
+  <h1 class="text-5xl self-center my-10">
+   Welcome to
+   <span class="text-red-500"> {{ destination_obj.name }}! </span>
+  </h1>
+  <p class="w-3/4 text-3xl">{{ destination_obj.general[0] }}</p>
+  <p class="w-3/4 text-2xl">{{ destination_obj.local_cuisine.history[0] }}</p>
+  <h2 class="text-4xl font-bold my-5">Local Cuisine</h2>
+  <div>
+   <h3 class="self-start text-3xl my-2">Flavorful Dishes</h3>
+   <div class="flex gap-3 justify-center">
+    <div
+     v-for="(i, index) in destination_obj.local_cuisine.popularDishes"
+     :key="index"
+    >
+     <CardImage1
+      :description="i.description"
+      :name="i.name"
+      :similar="i.similar_dish"
+     />
+    </div>
    </div>
   </div>
+
   <div class="divider"></div>
-  <div class="flex gap-3 justify-center">
-   <div
-    v-for="(i, index) in destination_obj.local_cuisine.appetizers"
-    :key="index"
-   >
-    <CardImage :description="i.description" :name="i.name" />
+  <div>
+   <h3 class="text-3xl my-2">
+    The<span class="text-red-500"> Local </span>Appetizers
+   </h3>
+   <div class="flex gap-3 justify-center">
+    <div
+     v-for="(i, index) in destination_obj.local_cuisine.appetizers"
+     :key="index"
+    >
+     <CardImage2
+      :description="i.description"
+      :name="i.name"
+      :similar="i.similar_dish"
+     />
+    </div>
    </div>
   </div>
+
   <div class="divider"></div>
-  <div class="flex gap-3 justify-center">
-   <div
-    v-for="(i, index) in destination_obj.local_cuisine.beverages"
-    :key="index"
-   >
-    <CardImage :description="i.description" :name="i.name" />
+  <div>
+   <h3 class="self-start text-3xl my-2">Refreshing Beverages</h3>
+   <div class="flex gap-3 justify-center">
+    <div
+     v-for="(i, index) in destination_obj.local_cuisine.beverages"
+     :key="index"
+    >
+     <CardImage3
+      :description="i.description"
+      :name="i.name"
+      :similar="i.similar_dish"
+     />
+    </div>
    </div>
   </div>
+
   <div class="divider"></div>
-  <div class="flex gap-3 justify-center">
-   <div
-    v-for="(i, index) in destination_obj.local_cuisine.desserts"
-    :key="index"
-   >
-    <CardImage :description="i.description" :name="i.name" />
+  <div>
+   <h3 class="text-3xl my-2">Tasty Desserts</h3>
+   <div class="flex gap-3 justify-center">
+    <div
+     v-for="(i, index) in destination_obj.local_cuisine.desserts"
+     :key="index"
+    >
+     <CardImage4
+      :description="i.description"
+      :name="i.name"
+      :similar="i.similar_dish"
+     />
+    </div>
    </div>
   </div>
  </main>
+ <Footer />
  <!-- <main class="">
   <Navbar />
 
