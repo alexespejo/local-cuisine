@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
  modules: ["nuxt-chatgpt"],
  chatgpt: {
-  apiKey: "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",
+  apiKey: process.env.NUXT_API_SECRET,
  },
  css: ["~/assets/css/main.css"],
  postcss: {

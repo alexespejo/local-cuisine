@@ -20,6 +20,7 @@
     "@googlemaps/js-api-loader": "^1.15.1",
     "@tweenjs/tween.js": "^19.0.0",
     "daisyui": "^2.51.5",
+    "dotenv": "^16.0.3",
     "openai": "^3.2.1"
   }
 }
